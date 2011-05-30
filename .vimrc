@@ -9,6 +9,8 @@ set tabstop=4
 set sw=4
 set expandtab
 filetype plugin indent on
+filetype on
+filetype plugin on
 " OmniComplete en F2
 imap <f2> <c-x><c-o>
 "Reconocimiento de ficheros y autocompletado (Ommicomplete)
