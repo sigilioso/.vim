@@ -23,6 +23,9 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 "Para utilizar templates
 :autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.tpl
+" Para evitar trailing de whitespaces
+:highlight TrailWhitespace ctermbg=blue guibg=blue
+:match TrailWhitespace /\s\+$\| \+\ze\t/
 "Para gvim
 hi Visual term=reverse
 hi Visual guibg=blue
