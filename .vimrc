@@ -26,9 +26,6 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 " Para evitar trailing de whitespaces
 :highlight TrailWhitespace ctermbg=blue guibg=blue
 :match TrailWhitespace /\s\+$\| \+\ze\t/
-"Simplenote credentials
-"See https://github.com/mrtazz/simplenote.vim/blob/master/README.md
-source ~/.simplenote
 "Para gvim
 hi Visual term=reverse
 hi Visual guibg=blue
