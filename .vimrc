@@ -30,8 +30,8 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 hi Visual term=reverse
 hi Visual guibg=blue
 hi Folded guibg=brown
-"Pydiction files location
-let g:pydiction_location = '~/.vim/pydiction_files/complete-dict'
+"ConqueTerm settings
+let g:ConqueTerm_CloseOnEnd = 1
 
 "Cosas para plugin latexsuite
 " (Instalar con lo siguiente, o desde la web)
