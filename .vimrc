@@ -8,6 +8,7 @@ set hlsearch
 set tabstop=4
 set sw=4
 set expandtab
+set modeline
 filetype plugin indent on
 filetype on
 filetype plugin on
