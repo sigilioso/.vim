@@ -33,7 +33,8 @@ hi Visual guibg=blue
 hi Folded guibg=brown
 "ConqueTerm settings
 let g:ConqueTerm_CloseOnEnd = 1
-
+"TwitVim settings
+let twitvim_enable_python = 1
 "Cosas para plugin latexsuite
 " (Instalar con lo siguiente, o desde la web)
 "apt-get install vim-latexsuite
