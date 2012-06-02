@@ -1,4 +1,4 @@
-"Opciones varias
+"My Standard options
 syntax on
 colorscheme koehler
 set autoindent
@@ -12,9 +12,9 @@ set modeline
 filetype plugin indent on
 filetype on
 filetype plugin on
-" OmniComplete en F2
+" OmniComplete to F2
 imap <f2> <c-x><c-o>
-"Reconocimiento de ficheros y autocompletado (Ommicomplete)
+" (Ommicomplete) for specific files
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
@@ -22,12 +22,15 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
-"Para utilizar templates
+" 2 spaces for html and files
+au FileType html set sw=2 sts=2 et
+au FileType xml set sw=2 sts=2 et
+" Just to use templates
 :autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.tpl
-" Para evitar trailing de whitespaces
+" Show trailing whitespaces on blue
 :highlight TrailWhitespace ctermbg=blue guibg=blue
 :match TrailWhitespace /\s\+$\| \+\ze\t/
-"Para gvim
+" Gvim stuff
 hi Visual term=reverse
 hi Visual guibg=blue
 hi Folded guibg=brown
@@ -35,15 +38,13 @@ hi Folded guibg=brown
 let g:ConqueTerm_CloseOnEnd = 1
 "TwitVim settings
 let twitvim_enable_python = 1
-"Cosas para plugin latexsuite
-" (Instalar con lo siguiente, o desde la web)
-"apt-get install vim-latexsuite
-"vim-addons -w install latex-suite
-" Si a pesar de la última línea sigue dando problemas la e con tilde,
-" comentar en el fichero
-" /usr/share/vim/addons/ftplugin/latex-suite/envmacros.vim
-" La línea en la que ponga: call Tex_SetItemMaps()
-" cerca del final del fichero.
+" Latexsuite plugin stuff
+" (Install vim-latexsuite)
+"  apt-get install vim-latexsuite
+"  vim-addons -w install latex-suite
+" If there is problems for é...
+" Comment on 'envmacros.vim' call Text_SetItemMaps()' line
+" For example: /usr/share/vim/addons/ftplugin/latex-suite/envmacros.vim
 
 "filetype plugin on
 "let g:Tex_ViewRule_pdf='FoxitReader'
@@ -51,5 +52,5 @@ let twitvim_enable_python = 1
 "let g:Tex_CompileRule_pdf='rubber --inplace --maxerr -1 --short --force --warn all --pdf $*'
 "imap <buffer> <M-n> <Plug>Tex_InsertItemOnThisLine
 
-"Corrección ortográfica de archivos latex con aspell en español, uso de <F3>
+"Spanish spell-checking <F3> (aspell is needed)
 "map <F3> <Esc>:w<CR>:!aspell -l es -t -c %<CR>:e! %<CR>
