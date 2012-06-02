@@ -23,8 +23,8 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 " 2 spaces for html and files
-au FileType html set sw=2 sts=2 et
-au FileType xml set sw=2 sts=2 et
+au FileType html setlocal sw=2 tabstop=2 et
+au FileType xml setlocal sw=2 tabstop=2 et
 " Just to use templates
 :autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.tpl
 " Show trailing whitespaces on blue
