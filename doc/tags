@@ -255,6 +255,12 @@ conque-term-write	conque_term.txt	/*conque-term-write*
 conque-term-writeln	conque_term.txt	/*conque-term-writeln*
 cs	surround.txt	/*cs*
 ds	surround.txt	/*ds*
+g:VMEPextensions	vmep.txt	/*g:VMEPextensions*
+g:VMEPhtmlreader	vmep.txt	/*g:VMEPhtmlreader*
+g:VMEPoutputdirectory	vmep.txt	/*g:VMEPoutputdirectory*
+g:VMEPoutputformat	vmep.txt	/*g:VMEPoutputformat*
+g:VMEPstylesheet	vmep.txt	/*g:VMEPstylesheet*
+g:VMEPtemplate	vmep.txt	/*g:VMEPtemplate*
 hl-twitterLink	twitvim.txt	/*hl-twitterLink*
 hl-twitterReply	twitvim.txt	/*hl-twitterReply*
 hl-twitterTime	twitvim.txt	/*hl-twitterTime*
@@ -321,6 +327,10 @@ twitvim_urlborg_key	twitvim.txt	/*twitvim_urlborg_key*
 twitvim_woeid	twitvim.txt	/*twitvim_woeid*
 vS	surround.txt	/*vS*
 vgS	surround.txt	/*vgS*
+vmep-global-settings	vmep.txt	/*vmep-global-settings*
+vmep-local-settings	vmep.txt	/*vmep-local-settings*
+vmep-templates	vmep.txt	/*vmep-templates*
+vmep.txt	vmep.txt	/*vmep.txt*
 vs	surround.txt	/*vs*
 xml-plugin-callbacks	xml-plugin.txt	/*xml-plugin-callbacks*
 xml-plugin-html	xml-plugin.txt	/*xml-plugin-html*
