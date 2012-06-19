@@ -128,10 +128,6 @@ a:active {
     cursor: text;
     position: relative;
 }
-.page h1:hover a.anchor, .page h2:hover a.anchor, .page h3:hover a.anchor, .page h4:hover a.anchor, .page h5:hover a.anchor, .page h6:hover a.anchor {
-    background: url('../../images/modules/styleguide/para.png') no-repeat 10px center;
-    text-decoration: none;
-}
 .page h1 tt, .page h1 code, .page h2 tt, .page h2 code, .page h3 tt, .page h3 code, .page h4 tt, .page h4 code, .page h5 tt, .page h5 code, .page h6 tt, .page h6 code {
     font-size: inherit;
 }
@@ -161,7 +157,7 @@ a:active {
     margin: 15px 0;
 }
 .page hr {
-    background: transparent url('../../images/modules/pulls/dirty-shade.png') repeat-x 0 0;
+    background: transparent url('./img/dirty-shade.png') repeat-x 0 0;
     border: 0 none;
     color: #ccc;
     height: 4px;
