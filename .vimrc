@@ -25,6 +25,8 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 " 2 spaces for html and files
 au FileType html setlocal sw=2 tabstop=2 et
 au FileType xml setlocal sw=2 tabstop=2 et
+" Use markdown syntax for .md files
+au BufNewFile,BufRead *.md set filetype=mkd
 " Just to use templates
 :autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.tpl
 " Show trailing whitespaces on blue
@@ -38,6 +40,10 @@ hi Folded guibg=brown
 let g:ConqueTerm_CloseOnEnd = 1
 "TwitVim settings
 let twitvim_enable_python = 1
+"Spell erros underline
+hi clear SpellBad
+hi SpellBad cterm=underline
+
 " Latexsuite plugin stuff
 " (Install vim-latexsuite)
 "  apt-get install vim-latexsuite
