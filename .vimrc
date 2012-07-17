@@ -12,6 +12,7 @@ set modeline
 filetype plugin indent on
 filetype on
 filetype plugin on
+set clipboard=unnamed
 " OmniComplete to F2
 imap <f2> <c-x><c-o>
 " (Ommicomplete) for specific files
