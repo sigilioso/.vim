@@ -41,9 +41,9 @@ hi Folded guibg=brown
 let g:ConqueTerm_CloseOnEnd = 1
 "TwitVim settings
 let twitvim_enable_python = 1
-"Spell erros underline
+"Spell errors (for spellcheck and others such as pyflakes) with underline
 hi clear SpellBad
-hi SpellBad cterm=underline
+hi SpellBad cterm=underline ctermfg=red
 
 " Latexsuite plugin stuff
 " (Install vim-latexsuite)
