@@ -28,6 +28,8 @@ au FileType html setlocal sw=2 tabstop=2 et
 au FileType xml setlocal sw=2 tabstop=2 et
 " Use markdown syntax for .md files
 au BufNewFile,BufRead *.md set filetype=markdown
+" Use javascript syntax for .db files (for MongoDB files)
+au BufNewFile,BufRead *.db set filetype=javascript
 " Just to use templates
 :autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.tpl
 " Show trailing whitespaces on blue
