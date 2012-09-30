@@ -1,6 +1,6 @@
 "My Standard options
 syntax on
-colorscheme koehler
+colorscheme ir_black
 set autoindent
 set smartindent
 set incsearch
@@ -47,7 +47,7 @@ let g:ConqueTerm_CloseOnEnd = 1
 let twitvim_enable_python = 1
 "Spell errors (for spellcheck and others such as pyflakes) with underline
 hi clear SpellBad
-hi SpellBad cterm=underline ctermfg=red
+hi SpellBad cterm=underline ctermfg=red gui=undercurl guisp=Red
 " Simplenote plugin credentials
 "    let g:SimplenoteUsername = 'your simplenote username' (use double quotes)
 "    let g:SimplenotePassword = 'your simplenote password'
