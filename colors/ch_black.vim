@@ -1,3 +1,4 @@
+" ch_black color scheme, based on 
 " ir_black color scheme
 " More at: http://blog.infinitered.com
 
@@ -100,12 +101,12 @@ if version >= 700 " Vim 7.x specific colors
   hi MatchParen     guifg=#f6f3e8     guibg=#857b6f     gui=BOLD      ctermfg=white       ctermbg=darkgray    cterm=NONE
   hi Pmenu          guifg=#f6f3e8     guibg=#444444     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
   hi PmenuSel       guifg=#000000     guibg=#cae682     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-  hi Search         guifg=NONE        guibg=#2F2F00     gui=underline ctermfg=NONE        ctermbg=NONE	      cterm=underline
+  hi Search         guifg=NONE        guibg=#222222     gui=underline ctermfg=NONE        ctermbg=darkgray	      cterm=underline
 endif
 
 " Syntax highlighting
-hi Comment          guifg=#7C7C7C     guibg=NONE        gui=NONE      ctermfg=cyan    ctermbg=NONE        cterm=NONE
-hi String           guifg=#A8FF60     guibg=NONE        gui=NONE      ctermfg=green       ctermbg=NONE        cterm=NONE
+hi Comment          guifg=#7C7C7C     guibg=NONE        gui=NONE      ctermfg=magenta    ctermbg=NONE        cterm=NONE
+hi String           guifg=DarkCyan     guibg=NONE        gui=NONE      ctermfg=cyan       ctermbg=NONE        cterm=NONE
 hi Number           guifg=#FF73FD     guibg=NONE        gui=NONE      ctermfg=magenta     ctermbg=NONE        cterm=NONE
 
 hi Keyword          guifg=#96CBFE     guibg=NONE        gui=NONE      ctermfg=blue        ctermbg=NONE        cterm=NONE
@@ -116,7 +117,7 @@ hi Todo             guifg=#8f8f8f     guibg=NONE        gui=NONE      ctermfg=re
 hi Constant         guifg=#99CC99     guibg=NONE        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
 
 hi Identifier       guifg=#C6C5FE     guibg=NONE        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
-hi Function         guifg=#FFD2A7     guibg=NONE        gui=NONE      ctermfg=brown       ctermbg=NONE        cterm=NONE
+hi Function         guifg=Orange     guibg=NONE        gui=NONE      ctermfg=brown       ctermbg=NONE        cterm=NONE
 hi Type             guifg=#FFFFB6     guibg=NONE        gui=NONE      ctermfg=yellow      ctermbg=NONE        cterm=NONE
 hi Statement        guifg=#6699CC     guibg=NONE        gui=NONE      ctermfg=lightblue   ctermbg=NONE        cterm=NONE
 
