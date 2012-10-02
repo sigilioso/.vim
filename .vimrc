@@ -1,6 +1,6 @@
 "My Standard options
 syntax on
-colorscheme ir_black
+colorscheme ch_black
 set autoindent
 set smartindent
 set incsearch
@@ -52,7 +52,8 @@ hi SpellBad cterm=underline ctermfg=red gui=undercurl guisp=Red
 "    let g:SimplenoteUsername = 'your simplenote username' (use double quotes)
 "    let g:SimplenotePassword = 'your simplenote password'
 source ~/.simplenoterc
-
+" Custom highlight for TagList
+highlight default MyTagListFileName guibg=darkblue ctermbg=darkblue
 
 " Latexsuite plugin stuff
 " (Install vim-latexsuite)
