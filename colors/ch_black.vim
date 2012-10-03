@@ -61,7 +61,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "ir_black"
+let colors_name = "ch_black"
 
 
 "hi Example         guifg=NONE        guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
@@ -79,7 +79,7 @@ hi StatusLineNC     guifg=black       guibg=#202020     gui=NONE      ctermfg=bl
 
 hi Folded           guifg=#a0a8b0     guibg=#384048     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi Title            guifg=#f6f3e8     guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-hi Visual           guifg=NONE        guibg=#262D51     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=REVERSE
+hi Visual           guifg=NONE        guibg=NONE     gui=REVERSE      ctermfg=NONE        ctermbg=NONE        cterm=REVERSE
 
 hi SpecialKey       guifg=#808080     guibg=#343434     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 
@@ -121,9 +121,9 @@ hi Function         guifg=Orange     guibg=NONE        gui=NONE      ctermfg=bro
 hi Type             guifg=#FFFFB6     guibg=NONE        gui=NONE      ctermfg=yellow      ctermbg=NONE        cterm=NONE
 hi Statement        guifg=#6699CC     guibg=NONE        gui=NONE      ctermfg=lightblue   ctermbg=NONE        cterm=NONE
 
-hi Special          guifg=#E18964     guibg=NONE        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
+hi Special          guifg=#E18964     guibg=NONE        gui=NONE      ctermfg=yellow       ctermbg=NONE        cterm=NONE
 hi Delimiter        guifg=#00A0A0     guibg=NONE        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
-hi Operator         guifg=white       guibg=NONE        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
+hi Operator         guifg=yellow       guibg=NONE        gui=NONE      ctermfg=yellow       ctermbg=NONE        cterm=NONE
 
 hi link Character       Constant
 hi link Boolean         Constant
