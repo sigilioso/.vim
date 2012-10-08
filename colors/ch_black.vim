@@ -74,7 +74,7 @@ hi Cursor           guifg=black       guibg=white       gui=NONE      ctermfg=bl
 hi LineNr           guifg=#3D3D3D     guibg=black       gui=NONE      ctermfg=darkgray    ctermbg=NONE        cterm=NONE
 
 hi VertSplit        guifg=#202020     guibg=#102020     gui=NONE      ctermfg=darkgray    ctermbg=darkgray    cterm=NONE
-hi StatusLine       guifg=#CCCCCC     guibg=#102020     gui=NONE    ctermfg=white       ctermbg=black    cterm=underline
+hi StatusLine       guifg=#CCCCCC     guibg=#102020     gui=NONE    ctermfg=white       ctermbg=black    cterm=NONE
 hi StatusLineNC     guifg=black       guibg=#102020     gui=NONE      ctermfg=blue        ctermbg=darkgray    cterm=NONE  
 
 hi Folded           guifg=#a0a8b0     guibg=#384048     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
@@ -93,7 +93,7 @@ hi WarningMsg       guifg=white       guibg=#FF6C60     gui=BOLD      ctermfg=wh
 hi LongLineWarning  guifg=NONE        guibg=#371F1C     gui=underline ctermfg=NONE        ctermbg=NONE	      cterm=underline
 
 " Message displayed in lower left, such as --INSERT--
-hi ModeMsg          guifg=black       guibg=#C6C5FE     gui=BOLD      ctermfg=black       ctermbg=cyan        cterm=BOLD
+hi ModeMsg          guifg=black       guibg=#C6C5FE     gui=BOLD      ctermfg=white       ctermbg=blue        cterm=BOLD
 
 if version >= 700 " Vim 7.x specific colors
   hi CursorLine     guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
@@ -101,7 +101,7 @@ if version >= 700 " Vim 7.x specific colors
   hi MatchParen     guifg=#f6f3e8     guibg=#857b6f     gui=BOLD      ctermfg=white       ctermbg=darkgray    cterm=NONE
   hi Pmenu          guifg=#f6f3e8     guibg=#444444     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
   hi PmenuSel       guifg=#000000     guibg=#cae682     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-  hi Search         guifg=NONE        guibg=#222222     gui=underline ctermfg=NONE        ctermbg=darkgray	      cterm=underline
+  hi Search         guifg=NONE        guibg=#222222     gui=underline ctermfg=white        ctermbg=darkgray	      cterm=underline
 endif
 
 " Syntax highlighting
