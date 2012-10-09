@@ -66,7 +66,7 @@ function! GitBranch()
     return ''
 endfunction
 set laststatus=2
-set statusline=%<%f\ %y\%{GitBranch()}\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+set statusline=%<%f\ %y\%{GitBranch()}\ %h%m%r%=%-1.(%l,%c%V%)\ %P
 
 " Latexsuite plugin stuff
 " (Install vim-latexsuite)
