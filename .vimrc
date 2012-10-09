@@ -54,19 +54,6 @@ hi SpellBad cterm=underline ctermfg=red gui=undercurl guisp=Red
 source ~/.simplenoterc
 " Custom highlight for TagList
 highlight default MyTagListFileName guibg=darkblue ctermbg=darkblue
-" -----------------
-" Custom status line
-" -----------------
-" Git branch information
-function! GitBranch()
-    let branch = system("git rev-parse --abbrev-ref HEAD 2> /dev/null")
-    if branch != ''
-        return ' «' . substitute(branch, '\n', '', 'g') . '»'
-    en
-    return ''
-endfunction
-set laststatus=2
-set statusline=%<%f\ %y\%{GitBranch()}\ %h%m%r%=%-1.(%l,%c%V%)\ %P
 
 " Latexsuite plugin stuff
 " (Install vim-latexsuite)
