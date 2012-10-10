@@ -25,9 +25,10 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
-" 2 spaces for html and files
-au FileType html setlocal sw=2 tabstop=2 et
-au FileType xml setlocal sw=2 tabstop=2 et
+" 1 tab as 4 spaces for html and files
+au FileType html setlocal noexpandtab
+au FileType xml setlocal noexpandtab
+au FileType javascript setlocal noexpandtab
 " Use markdown syntax for .md files
 au BufNewFile,BufRead *.md set filetype=markdown
 " Use javascript syntax for .db files (for MongoDB files)
