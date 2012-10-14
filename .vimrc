@@ -5,10 +5,13 @@ set autoindent
 set smartindent
 set incsearch
 set hlsearch
+set ignorecase
+set smartcase
 set tabstop=4
 set sw=4
 set expandtab
 set modeline
+set hidden
 filetype plugin indent on
 filetype on
 filetype plugin on
@@ -55,6 +58,10 @@ hi SpellBad cterm=underline ctermfg=red gui=undercurl guisp=Red
 source ~/.simplenoterc
 " Custom highlight for TagList
 highlight default MyTagListFileName guibg=darkblue ctermbg=darkblue
+" Undo, history and stuff
+set history=1000
+set undolevels=1000
+set wildignore=*swp,*.pyc
 
 " Latexsuite plugin stuff
 " (Install vim-latexsuite)
