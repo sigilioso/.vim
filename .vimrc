@@ -36,7 +36,6 @@ au FileType javascript setlocal noexpandtab
 au BufNewFile,BufRead *.md set filetype=markdown
 " Use javascript syntax for .db files (for MongoDB files)
 au BufNewFile,BufRead *.db set filetype=javascript
-au BufNewFile,BufRead *.db let g:JSLintHighlightErrorLine = 0
 " Just to use templates :autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.tpl
 " Show trailing whitespaces on blue
 :highlight TrailWhitespace ctermbg=blue guibg=blue
@@ -62,6 +61,8 @@ highlight default MyTagListFileName guibg=darkblue ctermbg=darkblue
 set history=1000
 set undolevels=1000
 set wildignore=*swp,*.pyc
+"Jslint configuration
+command! -nargs=0 Jslint exec "!/home/christian/tools/jsl/jsl -conf ~/.jslint/jslint.conf -process %"
 
 " Latexsuite plugin stuff
 " (Install vim-latexsuite)
