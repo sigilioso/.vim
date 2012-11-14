@@ -55,7 +55,7 @@ hi SpellBad cterm=underline ctermfg=red gui=undercurl guisp=Red
 " Simplenote plugin credentials
 "    let g:SimplenoteUsername = 'your simplenote username' (use double quotes)
 "    let g:SimplenotePassword = 'your simplenote password'
-source ~/.simplenoterc
+"source ~/.simplenoterc
 " Custom highlight for TagList
 highlight default MyTagListFileName guibg=darkblue ctermbg=darkblue
 " Undo, history and stuff
