@@ -64,6 +64,11 @@ set undolevels=1000
 set wildignore=*swp,*.pyc
 "Jslint configuration
 command! -nargs=0 Jslint exec "!/home/christian/tools/jsl/jsl -conf ~/.jslint/jslint.conf -process %"
+"ctrlp.vim plugin stuff
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+"Jedi-vim plugin stuff
+let g:jedi#auto_initialization = 1
+let g:jedi#popup_on_dot = 0
 
 " Latexsuite plugin stuff
 " (Install vim-latexsuite)
