@@ -66,9 +66,14 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 "Jedi-vim plugin stuff
 let g:jedi#auto_initialization = 1
 let g:jedi#popup_on_dot = 0
-"Spell errors (for spellcheck and others such as pyflakes) with underline
+" Spell errors (for spellcheck and others such as pyflakes) with underline
 hi clear SpellBad
 hi SpellBad cterm=underline ctermfg=red gui=undercurl guisp=Red
+" Python specific settings
+au Filetype python setlocal foldmethod=indent
+au Filetype python setlocal nofoldenable
+au Filetype python highligh OverLength ctermbg=darkgray guibg=darkgray
+au Filetype python match OverLength /\%81v.\+/
 
 " Latexsuite plugin stuff
 " (Install vim-latexsuite)
