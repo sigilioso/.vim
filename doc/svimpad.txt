@@ -1,0 +1,35 @@
+*svimpad.txt*     Plugin to publish notes to Springpad
+*svimpad*
+
+For Vim version 7.3 and above
+Last change: 2012 November 22
+Author:  Christian Felipe <sigilioso@gmail.com>        *svimpad-author*
+
+INTRODUCTION
+
+This plugin has been developed to publish notes to Springpad. It is a python
+based plugin and it used oauth and pygments modules.
+
+------------------------------------------------------------------------------
+
+COMMANDS                                                *svimpad-commands*
+
+:Springpad                                              *:Springpad*
+
+Publish a note to Springpad containg the current file (with syntax color if
+available) and promt the user to introduce some extra information:
+- A title for the Springpad note
+- Some tags (can be introduced coma separated), example: "tag1,tag2,tag3"
+- Extra information: a comment or some text to introduce before the current
+file content on the Springpad note.
+
+------------------------------------------------------------------------------
+
+:Springpadfast [tag1 tag2 ...]                              *:Springpadfast*
+
+Publish a fast note, so no extra information is needed to publish the note.
+The note will include the current file content as note body, the file name as
+title and as many tags as specified as params.
+
+
+ vim:tw=78:ts=8:ft=help:norl:
