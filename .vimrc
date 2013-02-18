@@ -70,6 +70,8 @@ au Filetype python setlocal foldmethod=indent
 au Filetype python setlocal nofoldenable
 au Filetype python highligh OverLength ctermbg=darkgray guibg=darkgray
 au Filetype python match OverLength /\%79v.\+/
+" <leader>w to remove trailing whitespace
+nmap <leader>w :%s/\s\+$//<CR>:let @/=''<CR>
 
 " Latexsuite plugin stuff
 " (Install vim-latexsuite)
