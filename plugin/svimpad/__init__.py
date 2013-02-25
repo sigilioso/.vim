@@ -1,3 +1,0 @@
-"""
-svimpad module
-"""
