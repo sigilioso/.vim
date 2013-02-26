@@ -73,19 +73,16 @@ au Filetype python match OverLength /\%79v.\+/
 " <leader>w to remove trailing whitespace
 nmap <leader>w :%s/\s\+$//<CR>:let @/=''<CR>
 
-" Latexsuite plugin stuff
-" (Install vim-latexsuite)
-"  apt-get install vim-latexsuite
-"  vim-addons -w install latex-suite
-" If there is problems for é...
-" Comment on 'envmacros.vim' call Text_SetItemMaps()' line
-" For example: /usr/share/vim/addons/ftplugin/latex-suite/envmacros.vim
+" Pluggins settings (Vundle)
 
-"filetype plugin on
-"let g:Tex_ViewRule_pdf='FoxitReader'
-"let g:Tex_DefaultTargetFormat='pdf'
-"let g:Tex_CompileRule_pdf='rubber --inplace --maxerr -1 --short --force --warn all --pdf $*'
-"imap <buffer> <M-n> <Plug>Tex_InsertItemOnThisLine
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
-"Spanish spell-checking <F3> (aspell is needed)
-"map <F3> <Esc>:w<CR>:!aspell -l es -t -c %<CR>:e! %<CR>
+Bundle 'gmarik/vundle'
+
+Bundle 'kevinw/pyflakes-vim'
+Bundle 'tpope/vim-surround'
+Bundle 'pthrasher/conqueterm-vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'vim-scripts/taglist.vim'
+Bundle 'vim-scripts/TwitVim'
