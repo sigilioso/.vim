@@ -16,6 +16,7 @@ Bundle 'vim-scripts/TwitVim'
 Bundle 'kevinw/pyflakes-vim'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'vim-scripts/pep8'
+Bundle 'davidhalter/jedi-vim'
 
 "My Standard options
 syntax on
@@ -84,3 +85,9 @@ au Filetype python match OverLength /\%79v.\+/
 " <leader>w to remove trailing whitespace
 nmap <leader>w :%s/\s\+$//<CR>:let @/=''<CR>
 
+" jedi-vim configuration
+
+" don't start compleation typing .
+let g:jedi#popup_on_dot = 0
+" don't show definition of current function
+let g:jedi#show_function_definition = "0"
