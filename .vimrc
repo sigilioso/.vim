@@ -1,3 +1,22 @@
+" Vundle Configuration
+
+" Use Vundle to manage plugins
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+" More bundles
+Bundle 'scrooloose/nerdtree'
+Bundle 'rosenfeld/conque-term'
+Bundle 'tpope/vim-surround'
+Bundle 'vim-scripts/taglist.vim'
+Bundle 'vim-scripts/TwitVim'
+Bundle 'kevinw/pyflakes-vim'
+Bundle 'plasticboy/vim-markdown'
+Bundle 'vim-scripts/pep8'
+
 "My Standard options
 syntax on
 colorscheme ch_black
@@ -48,20 +67,12 @@ hi Folded guibg=brown
 let g:ConqueTerm_CloseOnEnd = 1
 "TwitVim settings
 let twitvim_enable_python = 1
-" Simplenote plugin credentials
-"    let g:SimplenoteUsername = 'your simplenote username' (use double quotes)
-"    let g:SimplenotePassword = 'your simplenote password'
-"source ~/.simplenoterc
 " Custom highlight for TagList
 highlight default MyTagListFileName guibg=darkblue ctermbg=darkblue
 " Undo, history and stuff
 set history=1000
 set undolevels=1000
 set wildignore=*swp,*.pyc
-"Jslint configuration
-command! -nargs=0 Jslint exec "!/home/christian/tools/jsl/jsl -conf ~/.jslint/jslint.conf -process %"
-"ctrlp.vim plugin stuff
-set runtimepath^=~/.vim/bundle/ctrlp.vim
 " Spell errors (for spellcheck and others such as pyflakes) with underline
 hi clear SpellBad
 hi SpellBad cterm=underline ctermfg=red gui=undercurl guisp=Red
@@ -73,19 +84,6 @@ au Filetype python match OverLength /\%79v.\+/
 " <leader>w to remove trailing whitespace
 nmap <leader>w :%s/\s\+$//<CR>:let @/=''<CR>
 
-" Latexsuite plugin stuff
-" (Install vim-latexsuite)
-"  apt-get install vim-latexsuite
-"  vim-addons -w install latex-suite
-" If there is problems for é...
-" Comment on 'envmacros.vim' call Text_SetItemMaps()' line
-" For example: /usr/share/vim/addons/ftplugin/latex-suite/envmacros.vim
-
-"filetype plugin on
-"let g:Tex_ViewRule_pdf='FoxitReader'
-"let g:Tex_DefaultTargetFormat='pdf'
-"let g:Tex_CompileRule_pdf='rubber --inplace --maxerr -1 --short --force --warn all --pdf $*'
-"imap <buffer> <M-n> <Plug>Tex_InsertItemOnThisLine
-
-"Spanish spell-checking <F3> (aspell is needed)
-"map <F3> <Esc>:w<CR>:!aspell -l es -t -c %<CR>:e! %<CR>
+" python-mode configuration
+let g:pymode_lint_write = 0
+let g:pymode_lint_checker = "pyflakes"
