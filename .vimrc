@@ -84,6 +84,3 @@ au Filetype python match OverLength /\%79v.\+/
 " <leader>w to remove trailing whitespace
 nmap <leader>w :%s/\s\+$//<CR>:let @/=''<CR>
 
-" python-mode configuration
-let g:pymode_lint_write = 0
-let g:pymode_lint_checker = "pyflakes"
