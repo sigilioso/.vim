@@ -58,8 +58,8 @@ au BufNewFile,BufRead *.db set filetype=javascript
 " Just to use templates
 :autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.tpl
 " Show trailing whitespaces on blue
-:highlight TrailWhitespace ctermbg=blue guibg=blue
-:match TrailWhitespace /\s\+$\| \+\ze\t/
+hi TrailWhitespace ctermbg=blue guibg=blue
+match TrailWhitespace /\s\+$\| \+\ze\t/
 " Gvim stuff
 hi Visual term=reverse
 hi Visual guibg=blue
