@@ -51,6 +51,9 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 " set 2 spaces for html
 au FileType html setlocal tabstop=2
 au FileType html setlocal sw=2
+" set 2 spaces for conf
+au FileType conf setlocal tabstop=2
+au FileType html setlocal sw=2
 " Use markdown syntax for .md files
 au BufNewFile,BufRead *.md set filetype=markdown
 " Use javascript syntax for .db files (for MongoDB files)
