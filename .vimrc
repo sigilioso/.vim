@@ -17,6 +17,7 @@ Bundle 'kevinw/pyflakes-vim'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'vim-scripts/pep8'
 Bundle 'davidhalter/jedi-vim'
+Bundle 'fholgado/minibufexpl.vim'
 
 "My Standard options
 syntax on
@@ -87,6 +88,8 @@ au Filetype python highligh OverLength ctermbg=darkgray guibg=darkgray
 au Filetype python match OverLength /\%79v.\+/
 " <leader>w to remove trailing whitespace
 nmap <leader>w :%s/\s\+$//<CR>:let @/=''<CR>
+" <leader>n for :NERDTreeTogle
+nmap <leader>n :NERDTreeToggle<CR>
 
 " jedi-vim configuration
 
