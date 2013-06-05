@@ -15,9 +15,10 @@ Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/TwitVim'
 Bundle 'kevinw/pyflakes-vim'
 Bundle 'plasticboy/vim-markdown'
-Bundle 'vim-scripts/pep8'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'fholgado/minibufexpl.vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'kien/ctrlp.vim'
 
 "My Standard options
 syntax on
@@ -97,3 +98,6 @@ nmap <leader>N :NERDTreeToggle<CR>
 let g:jedi#popup_on_dot = 0
 " don't show definition of current function
 let g:jedi#show_function_definition = "0"
+
+" Use directly vim-pyflakes instead of syntastic for python
+let g:syntastic_python_checkers=[]
