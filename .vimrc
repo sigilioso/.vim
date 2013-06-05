@@ -89,7 +89,7 @@ au Filetype python match OverLength /\%79v.\+/
 " <leader>w to remove trailing whitespace
 nmap <leader>w :%s/\s\+$//<CR>:let @/=''<CR>
 " <leader>n for :NERDTreeTogle
-nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>N :NERDTreeToggle<CR>
 
 " jedi-vim configuration
 
