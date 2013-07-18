@@ -19,6 +19,8 @@ Bundle 'davidhalter/jedi-vim'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
+Bundle 'groenewege/vim-less'
+Bundle 'othree/html5.vim'
 
 "My Standard options
 syntax on
@@ -60,6 +62,8 @@ au FileType html setlocal sw=2
 au BufNewFile,BufRead *.md set filetype=markdown
 " Use javascript syntax for .db files (for MongoDB files)
 au BufNewFile,BufRead *.db set filetype=javascript
+" Use css syntax for less files
+au BufNewFile,BufRead *.less set filetype=css
 " Just to use templates
 :autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.tpl
 " Show trailing whitespaces on blue
