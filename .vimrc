@@ -90,7 +90,7 @@ hi SpellBad cterm=underline ctermfg=red gui=undercurl guisp=Red
 au Filetype python setlocal foldmethod=indent
 au Filetype python setlocal nofoldenable
 au Filetype python highligh OverLength ctermbg=darkgray guibg=darkgray
-au Filetype python match OverLength /\%79v.\+/
+au Filetype python match OverLength /\%99v.\+/
 " <leader>w to remove trailing whitespace
 nmap <leader>w :%s/\s\+$//<CR>:let @/=''<CR>
 " <leader>n for :NERDTreeTogle
