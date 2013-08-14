@@ -21,6 +21,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'othree/html5.vim'
+Bundle 'ivanov/vim-ipython'
 
 "My Standard options
 syntax on
@@ -105,3 +106,6 @@ let g:jedi#show_function_definition = "0"
 
 " Use directly vim-pyflakes instead of syntastic for python
 let g:syntastic_python_checkers=[]
+
+" vim-ipython note:
+" Remember you need to connecto to an EXISTING ipython, run: `ipython console`
