@@ -22,10 +22,10 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'othree/html5.vim'
 Bundle 'ivanov/vim-ipython'
+Bundle 'flazz/vim-colorschemes'
 
 "My Standard options
 syntax on
-colorscheme ch_black
 set autoindent
 set smartindent
 set incsearch
@@ -70,6 +70,10 @@ au BufNewFile,BufRead *.less set filetype=css
 " Show trailing whitespaces on blue
 hi TrailWhitespace ctermbg=blue guibg=blue
 match TrailWhitespace /\s\+$\| \+\ze\t/
+" Gnome terminal colors
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
 " Gvim stuff
 hi Visual term=reverse
 hi Visual guibg=blue
@@ -84,13 +88,15 @@ highlight default MyTagListFileName guibg=darkblue ctermbg=darkblue
 set history=1000
 set undolevels=1000
 set wildignore=*swp,*.pyc
+" Colorscheme
+colorscheme jellybeans
 " Spell errors (for spellcheck and others such as pyflakes) with underline
 hi clear SpellBad
-hi SpellBad cterm=underline ctermfg=red gui=undercurl guisp=Red
+hi SpellBad cterm=underline ctermfg=red gui=undercurl guisp=red
 " Python specific settings
 au Filetype python setlocal foldmethod=indent
 au Filetype python setlocal nofoldenable
-au Filetype python highligh OverLength ctermbg=darkgray guibg=darkgray
+au Filetype python highligh OverLength ctermbg=darkblue guibg=darkblue
 au Filetype python match OverLength /\%99v.\+/
 " <leader>w to remove trailing whitespace
 nmap <leader>w :%s/\s\+$//<CR>:let @/=''<CR>
@@ -109,3 +115,4 @@ let g:syntastic_python_checkers=[]
 
 " vim-ipython note:
 " Remember you need to connecto to an EXISTING ipython, run: `ipython console`
+"
