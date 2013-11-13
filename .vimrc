@@ -23,6 +23,7 @@ Bundle 'groenewege/vim-less'
 Bundle 'othree/html5.vim'
 Bundle 'ivanov/vim-ipython'
 Bundle 'flazz/vim-colorschemes'
+Bundle 'Lokaltog/vim-distinguished'
 
 "My Standard options
 syntax on
@@ -89,7 +90,7 @@ set history=1000
 set undolevels=1000
 set wildignore=*swp,*.pyc
 " Colorscheme
-colorscheme jellybeans
+colorscheme distinguished
 " Spell errors (for spellcheck and others such as pyflakes) with underline
 hi clear SpellBad
 hi SpellBad cterm=underline ctermfg=red gui=undercurl guisp=red
