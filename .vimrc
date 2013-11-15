@@ -110,6 +110,8 @@ nmap <leader>N :NERDTreeToggle<CR>
 let g:jedi#popup_on_dot = 0
 " don't show definition of current function
 let g:jedi#show_function_definition = "0"
+" use buffers instead of tabs
+let g:jedi#use_tabs_not_buffers = 0
 
 " Use directly vim-pyflakes instead of syntastic for python
 let g:syntastic_python_checkers=[]
