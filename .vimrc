@@ -23,7 +23,7 @@ Bundle 'groenewege/vim-less'
 Bundle 'othree/html5.vim'
 Bundle 'ivanov/vim-ipython'
 Bundle 'flazz/vim-colorschemes'
-Bundle 'Lokaltog/vim-distinguished'
+Bundle 'sigilioso/vim-distinguished'
 
 "My Standard options
 syntax on
