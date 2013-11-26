@@ -68,9 +68,6 @@ au BufNewFile,BufRead *.db set filetype=javascript
 au BufNewFile,BufRead *.less set filetype=css
 " Just to use templates
 :autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.tpl
-" Show trailing whitespaces on blue
-hi TrailWhitespace ctermbg=blue guibg=blue
-match TrailWhitespace /\s\+$\| \+\ze\t/
 " Gnome terminal colors
 if $COLORTERM == 'gnome-terminal'
   set t_Co=256
@@ -103,6 +100,10 @@ au Filetype python match OverLength /\%99v.\+/
 nmap <leader>w :%s/\s\+$//<CR>:let @/=''<CR>
 " <leader>n for :NERDTreeTogle
 nmap <leader>N :NERDTreeToggle<CR>
+
+" Show trailing whitespaces
+hi TrailWhitespace ctermbg=17 guibg=17
+match TrailWhitespace /\s\+$\| \+\ze\t/
 
 " jedi-vim configuration
 
