@@ -110,7 +110,7 @@ match TrailWhitespace /\s\+$\| \+\ze\t/
 " don't start compleation typing .
 let g:jedi#popup_on_dot = 0
 " don't show definition of current function
-let g:jedi#show_function_definition = "0"
+let g:jedi#show_call_signatures = "0"
 " use buffers instead of tabs
 let g:jedi#use_tabs_not_buffers = 0
 
