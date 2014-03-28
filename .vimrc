@@ -120,3 +120,5 @@ let g:syntastic_python_checkers=[]
 " vim-ipython note:
 " Remember you need to connecto to an EXISTING ipython, run: `ipython console`
 "
+" NERDTree: ignore pyc
+let NERDTreeIgnore = ['\.pyc$']
