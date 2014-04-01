@@ -9,22 +9,22 @@ Bundle 'gmarik/vundle'
 
 " More bundles
 Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
 Bundle 'rosenfeld/conque-term'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/taglist.vim'
-Bundle 'vim-scripts/TwitVim'
-Bundle 'kevinw/pyflakes-vim'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'davidhalter/jedi-vim'
-Bundle 'fholgado/minibufexpl.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'othree/html5.vim'
 Bundle 'ivanov/vim-ipython'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'sigilioso/vim-distinguished'
+Bundle 'bling/vim-airline'
+Bundle 'jmcantrell/vim-virtualenv'
 
-"My Standard options
+"Standard options
 syntax on
 set autoindent
 set smartindent
@@ -77,8 +77,6 @@ hi Visual guibg=blue
 hi Folded guibg=brown
 "ConqueTerm settings
 let g:ConqueTerm_CloseOnEnd = 1
-"TwitVim settings
-let twitvim_enable_python = 1
 " Custom highlight for TagList
 highlight default MyTagListFileName guibg=darkblue ctermbg=darkblue
 " Undo, history and stuff
@@ -93,12 +91,13 @@ hi SpellBad cterm=underline ctermfg=red gui=undercurl guisp=red
 " Python specific settings
 au Filetype python setlocal foldmethod=indent
 au Filetype python setlocal nofoldenable
-au Filetype python highligh OverLength ctermbg=darkblue guibg=darkblue
-au Filetype python match OverLength /\%99v.\+/
 " <leader>w to remove trailing whitespace
 nmap <leader>w :%s/\s\+$//<CR>:let @/=''<CR>
 " <leader>n for :NERDTreeTogle
 nmap <leader>N :NERDTreeToggle<CR>
+" move throught buffers
+map <C-j> :bn<CR>
+map <C-k> :bp<CR>
 
 " Show trailing whitespaces
 hi TrailWhitespace ctermbg=17 guibg=17
@@ -113,11 +112,17 @@ let g:jedi#show_call_signatures = "0"
 " use buffers instead of tabs
 let g:jedi#use_tabs_not_buffers = 0
 
-" Use directly vim-pyflakes instead of syntastic for python
-let g:syntastic_python_checkers=[]
-
 " vim-ipython note:
 " Remember you need to connecto to an EXISTING ipython, run: `ipython console`
 "
 " NERDTree: ignore pyc
 let NERDTreeIgnore = ['\.pyc$']
+
+" airline stuff
+set laststatus=2 "show statusline even when not splitting
+let g:bufferline_echo = 0 "bufferline on top
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+
+"syntastic note:
+" for python install flake8: pip install flake8
