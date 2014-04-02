@@ -124,5 +124,7 @@ let g:bufferline_echo = 0 "bufferline on top
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
-"syntastic note:
-" for python install flake8: pip install flake8
+"syntastic
+"note: for python install flake8: pip install flake8
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_check_on_open = 1
