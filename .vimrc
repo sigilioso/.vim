@@ -96,8 +96,8 @@ nmap <leader>w :%s/\s\+$//<CR>:let @/=''<CR>
 " <leader>n for :NERDTreeTogle
 nmap <leader>N :NERDTreeToggle<CR>
 " move throught buffers
-map <C-j> :bn<CR>
-map <C-k> :bp<CR>
+map <C-j> :bp<CR>
+map <C-k> :bn<CR>
 
 " Show trailing whitespaces
 hi TrailWhitespace ctermbg=17 guibg=17
