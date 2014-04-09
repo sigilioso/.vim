@@ -23,6 +23,7 @@ Bundle 'flazz/vim-colorschemes'
 Bundle 'sigilioso/vim-distinguished'
 Bundle 'bling/vim-airline'
 Bundle 'jmcantrell/vim-virtualenv'
+Bundle 'vim-scripts/TwitVim'
 
 "Standard options
 syntax on
@@ -53,9 +54,11 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
-" set 2 spaces for html
+" set 2 spaces for html and xml
 au FileType html setlocal tabstop=2
 au FileType html setlocal sw=2
+au FileType xml setlocal tabstop=2
+au FileType xml setlocal sw=2
 " set 2 spaces for conf
 au FileType conf setlocal tabstop=2
 au FileType html setlocal sw=2
