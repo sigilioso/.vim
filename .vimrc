@@ -12,6 +12,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'rosenfeld/conque-term'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-fugitive'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'davidhalter/jedi-vim'
@@ -24,6 +25,7 @@ Bundle 'sigilioso/vim-distinguished'
 Bundle 'bling/vim-airline'
 Bundle 'jmcantrell/vim-virtualenv'
 Bundle 'vim-scripts/TwitVim'
+Bundle 'mileszs/ack.vim'
 
 "Standard options
 syntax on
