@@ -59,6 +59,8 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 " set 2 spaces for html and xml
 au FileType html setlocal tabstop=2
 au FileType html setlocal sw=2
+au FileType htmldjango setlocal tabstop=2
+au FileType htmldjango setlocal sw=2
 au FileType xml setlocal tabstop=2
 au FileType xml setlocal sw=2
 " set 2 spaces for conf
@@ -133,3 +135,6 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 "note: for python install flake8: pip install flake8
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_check_on_open = 1
+
+"twit-vim
+let twitvim_count = 100
