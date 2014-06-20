@@ -138,3 +138,8 @@ let g:syntastic_check_on_open = 1
 
 "twit-vim
 let twitvim_count = 100
+
+"Rst files preview
+:command Rst :!rst2html.py % > /tmp/rstprev.html && xdg-open /tmp/rstprev.html
+"Insert ipdb with <leader>b
+nnoremap <leader>b oimport ipdb;ipdb.set_trace()
