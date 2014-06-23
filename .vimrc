@@ -141,6 +141,6 @@ let g:syntastic_check_on_open = 1
 let twitvim_count = 100
 
 "Rst files preview
-:command Rst :!rst2html.py --stylesheet=$HOME/.vim/extra/style-rst2html.css % > /tmp/rstprev.html && xdg-open /tmp/rstprev.html
+:command Rst :!rst2html.py --stylesheet=$HOME/.vim/extra/style-rst2html.css % > /tmp/rstprev.html && xdg-open /tmp/rstprev.html &> /dev/null
 "Insert ipdb with <leader>b
 nnoremap <leader>b oimport ipdb;ipdb.set_trace()
