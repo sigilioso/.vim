@@ -42,6 +42,7 @@ set expandtab
 set modeline
 set hidden
 set colorcolumn=100
+set mouse=a
 filetype plugin indent on
 filetype on
 filetype plugin on
