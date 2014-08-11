@@ -46,7 +46,7 @@ set mouse=a
 filetype plugin indent on
 filetype on
 filetype plugin on
-set clipboard=unnamed
+set clipboard=unnamedplus
 "Set leader to ,
 :let mapleader = ","
 " OmniComplete to F2
