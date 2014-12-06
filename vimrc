@@ -1,31 +1,35 @@
 " Vundle Configuration
 
 " Use Vundle to manage plugins
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " More bundles
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'rosenfeld/conque-term'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-fugitive'
-Bundle 'vim-scripts/taglist.vim'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'davidhalter/jedi-vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'groenewege/vim-less'
-Bundle 'othree/html5.vim'
-Bundle 'ivanov/vim-ipython'
-Bundle 'flazz/vim-colorschemes'
-Bundle 'sigilioso/vim-distinguished'
-Bundle 'bling/vim-airline'
-Bundle 'jmcantrell/vim-virtualenv'
-Bundle 'vim-scripts/TwitVim'
-Bundle 'mileszs/ack.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'rosenfeld/conque-term'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'groenewege/vim-less'
+Plugin 'othree/html5.vim'
+Plugin 'ivanov/vim-ipython'
+Plugin 'sigilioso/vim-distinguished'
+Plugin 'bling/vim-airline'
+Plugin 'jmcantrell/vim-virtualenv'
+Plugin 'vim-scripts/TwitVim'
+Plugin 'mileszs/ack.vim'
+
+call vundle#end()
+filetype plugin indent on
 
 
 "Standard options
