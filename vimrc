@@ -27,6 +27,8 @@ Plugin 'bling/vim-airline'
 Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'vim-scripts/TwitVim'
 Plugin 'mileszs/ack.vim'
+" requires node and running (`npm install` in bundle directory)
+Plugin 'ternjs/tern_for_vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -63,16 +65,11 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
-" set 2 spaces for html and xml
-au FileType html setlocal tabstop=2
-au FileType html setlocal sw=2
-au FileType htmldjango setlocal tabstop=2
-au FileType htmldjango setlocal sw=2
+" set 2 spaces for xml
 au FileType xml setlocal tabstop=2
 au FileType xml setlocal sw=2
 " set 2 spaces for conf
 au FileType conf setlocal tabstop=2
-au FileType html setlocal sw=2
 " Use markdown syntax for .md files
 au BufNewFile,BufRead *.md set filetype=markdown
 " Use javascript syntax for .db files (for MongoDB files)
