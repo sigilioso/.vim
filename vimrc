@@ -65,9 +65,9 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
-" set 2 spaces for yml
-au FileType yml setlocal tabstop=2
-au FileType yml setlocal sw=2
+" set 2 spaces for yaml
+au FileType yaml setlocal tabstop=2
+au FileType yaml setlocal sw=2
 " set 2 spaces for conf
 au FileType conf setlocal tabstop=2
 " Use markdown syntax for .md files
