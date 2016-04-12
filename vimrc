@@ -17,7 +17,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'davidhalter/jedi-vim'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'kien/ctrlp.vim'
 Plugin 'groenewege/vim-less'
 Plugin 'othree/html5.vim'
@@ -114,15 +114,6 @@ map <C-k> :bn<CR>
 hi TrailWhitespace ctermbg=17 guibg=17
 match TrailWhitespace /\s\+$\| \+\ze\t/
 
-" jedi-vim configuration
-
-" don't start compleation typing .
-let g:jedi#popup_on_dot = 0
-" don't show definition of current function
-let g:jedi#show_call_signatures = "0"
-" use buffers instead of tabs
-let g:jedi#use_tabs_not_buffers = 0
-
 " vim-ipython note:
 " Remember you need to connecto to an EXISTING ipython, run: `ipython console`
 "
@@ -147,3 +138,9 @@ let twitvim_count = 100
 :command! Rst :!rst2html.py --stylesheet=$HOME/.vim/extra/style-rst2html.css % > /tmp/rstprev.html && xdg-open /tmp/rstprev.html &> /dev/null
 "Insert ipdb with <leader>b
 nnoremap <leader>b oimport ipdb;ipdb.set_trace()
+
+" YouCompleteMe configuration
+" see: <https://github.com/Valloric/YouCompleteMe#user-guide>
+nnoremap <leader>d :YcmCompleter GoTo<CR>
+"Use :YcmCompleter RestartServer [/path/to/python] to restart with other
+" python executable
