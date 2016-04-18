@@ -11,7 +11,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " More bundles
 Plugin 'scrooloose/nerdtree'
-" See extra/syntax for specific languages syntax
+" See extra/config for specific languages syntax configuration
 Plugin 'scrooloose/syntastic'
 Plugin 'rosenfeld/conque-term'
 Plugin 'tpope/vim-surround'
@@ -31,11 +31,11 @@ Plugin 'vim-scripts/TwitVim'
 Plugin 'mileszs/ack.vim'
 Plugin 'isRuslan/vim-es6'
 " requires node and running (`npm install` in bundle directory)
+" requires .tern-project file. see 'extra/config/.tern-project' example
 Plugin 'ternjs/tern_for_vim'
 
 call vundle#end()
 filetype plugin indent on
-
 
 "Standard options
 syntax on
@@ -149,3 +149,7 @@ let g:ycm_auto_trigger = 0
 let g:ycm_key_invoke_completion = '<C-o>'
 "Use :YcmCompleter RestartServer [/path/to/python] to restart with other
 " python executable
+
+" Ack
+" requires ag <https://github.com/ggreer/the_silver_searcher>
+let g:ackprg = 'ag --nogroup --nocolor --column'
