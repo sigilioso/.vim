@@ -11,12 +11,14 @@ Plugin 'gmarik/Vundle.vim'
 
 " More bundles
 Plugin 'scrooloose/nerdtree'
+" See extra/syntax for specific languages syntax
 Plugin 'scrooloose/syntastic'
 Plugin 'rosenfeld/conque-term'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'plasticboy/vim-markdown'
+" ./install.py inside plugin folder after installing see <https://github.com/Valloric/YouCompleteMe#user-guide>
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'kien/ctrlp.vim'
 Plugin 'groenewege/vim-less'
@@ -27,6 +29,7 @@ Plugin 'bling/vim-airline'
 Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'vim-scripts/TwitVim'
 Plugin 'mileszs/ack.vim'
+Plugin 'isRuslan/vim-es6'
 " requires node and running (`npm install` in bundle directory)
 Plugin 'ternjs/tern_for_vim'
 
