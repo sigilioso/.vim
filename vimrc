@@ -11,7 +11,6 @@ Plugin 'gmarik/Vundle.vim'
 
 " More bundles
 Plugin 'scrooloose/nerdtree'
-" See extra/config for specific languages syntax configuration
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
