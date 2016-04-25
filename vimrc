@@ -13,7 +13,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 " See extra/config for specific languages syntax configuration
 Plugin 'scrooloose/syntastic'
-Plugin 'rosenfeld/conque-term'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/taglist.vim'
@@ -146,6 +145,7 @@ nnoremap <leader>b oimport ipdb;ipdb.set_trace()
 " see: <https://github.com/Valloric/YouCompleteMe#user-guide>
 nnoremap <leader>d :YcmCompleter GoTo<CR>
 let g:ycm_auto_trigger = 0
+let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_key_invoke_completion = '<C-o>'
 "Use :YcmCompleter RestartServer [/path/to/python] to restart with other
 " python executable
