@@ -29,6 +29,7 @@ Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'vim-scripts/TwitVim'
 Plugin 'mileszs/ack.vim'
 Plugin 'isRuslan/vim-es6'
+Plugin 'leafgarland/typescript-vim'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 " requires node and running (`npm install` in bundle directory)
 " requires .tern-project file. see 'extra/config/.tern-project' example
@@ -105,6 +106,7 @@ hi SpellBad cterm=underline ctermfg=red gui=undercurl guisp=red
 " Python specific settings
 au Filetype python setlocal foldmethod=indent
 au Filetype python setlocal nofoldenable
+let python_highlight_all = 1
 " <leader>w to remove trailing whitespace
 nmap <leader>w :%s/\s\+$//<CR>:let @/=''<CR>
 " <leader>n for :NERDTreeTogle
