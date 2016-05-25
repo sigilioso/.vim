@@ -150,6 +150,7 @@ nnoremap <leader>d :YcmCompleter GoTo<CR>
 let g:ycm_auto_trigger = 0
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_key_invoke_completion = '<C-o>'
+let g:ycm_server_python_interpreter = '/usr/bin/python'
 "Use :YcmCompleter RestartServer [/path/to/python] to restart with other
 " python executable
 
