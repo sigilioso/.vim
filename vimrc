@@ -114,6 +114,7 @@ nmap <leader>N :NERDTreeToggle<CR>
 " move throught buffers
 map <C-j> :bp<CR>
 map <C-k> :bn<CR>
+map <C-u> :bwipeout<CR>
 
 " Show trailing whitespaces
 hi TrailWhitespace ctermbg=17 guibg=17
