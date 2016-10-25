@@ -31,6 +31,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'isRuslan/vim-es6'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'Glench/Vim-Jinja2-Syntax'
+Plugin 'digitaltoad/vim-pug'
 " requires node and running (`npm install` in bundle directory)
 " requires .tern-project file. see 'extra/config/.tern-project' example
 Plugin 'ternjs/tern_for_vim'
@@ -114,7 +115,7 @@ nmap <leader>N :NERDTreeToggle<CR>
 " move throught buffers
 map <C-j> :bp<CR>
 map <C-k> :bn<CR>
-map <C-u> :bwipeout<CR>
+nnoremap <leader>q :bp<CR>:bd #<CR>
 
 " Show trailing whitespaces
 hi TrailWhitespace ctermbg=17 guibg=17
