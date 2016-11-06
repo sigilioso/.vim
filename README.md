@@ -14,8 +14,6 @@ the system clipboard.
 - In order to use **Md** custom command, you need to install **markdown** and **pygments** Example (`sudo pip install markdown Pygments`)
 
 
-
-
 ## Plugins specific configuration
 
 ## syntastic
@@ -59,3 +57,11 @@ Ensure **flake8** is installed in the corresponding virtualenv
 Install _js-beautify_ for javascript and html autoformat.
 
     sudo npm install -g js-beautify
+
+
+## Ack
+
+
+It is configured to work with [ag](https://github.com/ggreer/the_silver_searcher).
+
+    sudo apt-get install silversearcher-ag
