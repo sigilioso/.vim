@@ -22,16 +22,16 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'groenewege/vim-less'
 Plugin 'othree/html5.vim'
 Plugin 'hdima/python-syntax'
-Plugin 'ivanov/vim-ipython'
 Plugin 'sigilioso/vim-distinguished'
 Plugin 'bling/vim-airline'
 Plugin 'jmcantrell/vim-virtualenv'
-Plugin 'vim-scripts/TwitVim'
 Plugin 'mileszs/ack.vim'
 Plugin 'isRuslan/vim-es6'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'digitaltoad/vim-pug'
+Plugin 'mattn/emmet-vim'
+Plugin 'Chiel92/vim-autoformat'
 " requires node and running (`npm install` in bundle directory)
 " requires .tern-project file. see 'extra/config/.tern-project' example
 Plugin 'ternjs/tern_for_vim'
@@ -70,9 +70,11 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
-" set 2 spaces for yaml
+" set 2 spaces for some languages
 au FileType yaml setlocal tabstop=2
 au FileType yaml setlocal sw=2
+au FileType javascript setlocal tabstop=2
+au FileType javascript setlocal sw=2
 " set 2 spaces for conf
 au FileType conf setlocal tabstop=2
 " Use markdown syntax for .md files
@@ -138,11 +140,10 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_check_on_open = 1
 
-"twit-vim
-let twitvim_count = 100
-
 "Rst files preview
 :command! Rst :!rst2html.py --stylesheet=$HOME/.vim/extra/style-rst2html.css % > /tmp/rstprev.html && xdg-open /tmp/rstprev.html &> /dev/null
+"Md files preview
+:command! Md :!python -m markdown % > /tmp/mdprev.html && xdg-open /tmp/mdprev.html &> /dev/null
 "Insert ipdb with <leader>b
 nnoremap <leader>b oimport ipdb;ipdb.set_trace()
 
