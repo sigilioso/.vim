@@ -75,14 +75,14 @@ au FileType yaml setlocal tabstop=2
 au FileType yaml setlocal sw=2
 au FileType javascript setlocal tabstop=2
 au FileType javascript setlocal sw=2
-" set 2 spaces for conf
+au FileType pug setlocal tabstop=2
+au FileType pug setlocal sw=2
 au FileType conf setlocal tabstop=2
+au FileType conf setlocal sw=2
 " Use markdown syntax for .md files
 au BufNewFile,BufRead *.md set filetype=markdown
 " Use javascript syntax for .db files (for MongoDB files)
 au BufNewFile,BufRead *.db set filetype=javascript
-" Use css syntax for less files
-au BufNewFile,BufRead *.less set filetype=css
 " Just to use templates
 :autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.tpl
 " Gnome terminal colors
@@ -146,6 +146,9 @@ let g:syntastic_check_on_open = 1
 :command! Md :!python -m markdown % > /tmp/mdprev.html && xdg-open /tmp/mdprev.html &> /dev/null
 "Insert ipdb with <leader>b
 nnoremap <leader>b oimport ipdb;ipdb.set_trace()
+
+"vim-markdown
+let g:vim_markdown_folding_disabled = 1
 
 " YouCompleteMe configuration
 " see: <https://github.com/Valloric/YouCompleteMe#user-guide>
