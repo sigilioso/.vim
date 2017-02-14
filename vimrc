@@ -162,3 +162,10 @@ let g:ycm_key_invoke_completion = '<C-o>'
 " Ack
 " requires ag <https://github.com/ggreer/the_silver_searcher>
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" Emmet (<ctrl>+y ,)
+let g:user_emmet_settings = {
+\  'html' : {
+\    'indentation' : '  '
+\  }
+\}
