@@ -77,6 +77,8 @@ au FileType javascript setlocal tabstop=2
 au FileType javascript setlocal sw=2
 au FileType pug setlocal tabstop=2
 au FileType pug setlocal sw=2
+au FileType html setlocal tabstop=2
+au FileType html setlocal sw=2
 au FileType conf setlocal tabstop=2
 au FileType conf setlocal sw=2
 " Use markdown syntax for .md files
