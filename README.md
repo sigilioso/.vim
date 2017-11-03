@@ -37,9 +37,9 @@ Ensure **flake8** is installed in the corresponding virtualenv
 
 ### Installation
 
-- Install: `cmake python-dev python3-dev nodejs npm`
+- Install: `cmake python-dev python3-dev nodejs npm golang`
 - Go into plugin directory: `cd ~/.vim/bundle/YouCompleteMe`
-- Install: `./install.py --tern-completer`
+- Install: `./install.py --js-completer --go-compleer
 
 
 ### Specific for javascript

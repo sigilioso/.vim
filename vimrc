@@ -32,10 +32,16 @@ Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'mattn/emmet-vim'
 Plugin 'Chiel92/vim-autoformat'
+
 " requires node and running (`npm install` in bundle directory)
 " requires .tern-project file. see 'extra/config/.tern-project' example
 Plugin 'ternjs/tern_for_vim'
+" ---
+
 Plugin 'terryma/vim-multiple-cursors'
+" Requires go up and running and GOPATH environment variable set
+Plugin 'fatih/vim-go'
+" ---
 
 call vundle#end()
 filetype plugin indent on
