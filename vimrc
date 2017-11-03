@@ -35,6 +35,7 @@ Plugin 'Chiel92/vim-autoformat'
 " requires node and running (`npm install` in bundle directory)
 " requires .tern-project file. see 'extra/config/.tern-project' example
 Plugin 'ternjs/tern_for_vim'
+Plugin 'terryma/vim-multiple-cursors'
 
 call vundle#end()
 filetype plugin indent on
@@ -54,6 +55,7 @@ set modeline
 set hidden
 set colorcolumn=100
 set mouse=a
+set showcmd
 filetype plugin indent on
 filetype on
 filetype plugin on
@@ -162,6 +164,7 @@ nnoremap <leader>d :YcmCompleter GoTo<CR>
 let g:ycm_auto_trigger = 0
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_key_invoke_completion = '<C-o>'
+let g:ycm_python_binary_path = 'python3'
 "Use :YcmCompleter RestartServer [/path/to/python] to restart with other
 " python executable
 
