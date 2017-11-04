@@ -2,6 +2,24 @@
 
 Just my vim configuration
 
+## Setup neovim using the same configuration
+
+- [Install neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim#ubuntu)
+- Install python2 and python3 support
+
+```
+    sudo pip2 install neovim
+    sudo pip3 install neovim
+```
+
+- Create `~/config/nvim/init.vim` file with
+
+```
+set runtimepath+=~/.vim,~/.vim/after
+set packpath+=~/.vim
+source ~/.vim/vimrc
+```
+
 
 ## Setting up
 
