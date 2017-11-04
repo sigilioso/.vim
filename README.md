@@ -7,7 +7,7 @@ Just my vim configuration
 - [Install neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim#ubuntu)
 - Install python2 and python3 support
 
-```
+```bash
     sudo pip2 install neovim
     sudo pip3 install neovim
 ```
@@ -20,6 +20,13 @@ set packpath+=~/.vim
 source ~/.vim/vimrc
 ```
 
+### Optional bashrc config
+
+```bash
+alias vim='nvim'
+alias vi='nvim'
+export EDITOR=nvim
+```
 
 ## Setting up
 
@@ -57,7 +64,7 @@ Ensure **flake8** is installed in the corresponding virtualenv
 
 - Install: `cmake python-dev python3-dev nodejs npm golang`
 - Go into plugin directory: `cd ~/.vim/bundle/YouCompleteMe`
-- Install: `./install.py --js-completer --go-compleer
+- Install: `./install.py --js-completer --go-compleer`
 
 
 ### Specific for javascript
