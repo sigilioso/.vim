@@ -30,7 +30,7 @@ export EDITOR=nvim
 
 ## Setting up
 
-- Follow [Vundle set-up instrunctions](https://github.com/VundleVim/Vundle.vim#quick-start).
+- Follow [Vim-pug installation instructions](https://github.com/junegunn/vim-plug).
 - **exuberant-ctags** package is required, given the _vimrc_ configuration.
 
 - It is recommended to install **vim-gnome** (or similar desktop integration) to make vim use
@@ -54,24 +54,6 @@ Ensure **flake8** is installed in the corresponding virtualenv
 ### javascript syntax
 
     npm install -g jshint
-
-
-## youcompleteme
-
-<https://github.com/Valloric/YouCompleteMe>
-
-### Installation
-
-- Install: `cmake python-dev python3-dev nodejs npm golang`
-- Go into plugin directory: `cd ~/.vim/bundle/YouCompleteMe`
-- Install: `./install.py --js-completer --go-compleer`
-
-
-### Specific for javascript
-
-- Go into _ternjs plugin_ directory: `cd ~/.vim/bundle/tern_for_vim`
-- Run installation: `npm install`
-- Copy global configuration to your home directory: `cp ~/.vim/extra/config/.tern-config ~`
 
 
 ## vim-autoformat

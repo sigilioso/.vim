@@ -3,47 +3,53 @@
 " Use Vundle to manage plugins
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
-" let Vundle manage Vundle
-Plugin 'gmarik/Vundle.vim'
+" -------------- plugins --------------
+" plugin management with vim-plug
+call plug#begin('~/.vim/plugged')
 
-" More bundles
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-fugitive'
-Plugin 'vim-scripts/taglist.vim'
-Plugin 'plasticboy/vim-markdown'
-" ./install.py inside plugin folder after installing see <https://github.com/Valloric/YouCompleteMe#user-guide>
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'kien/ctrlp.vim'
-Plugin 'groenewege/vim-less'
-Plugin 'othree/html5.vim'
-Plugin 'hdima/python-syntax'
-Plugin 'sigilioso/vim-distinguished'
-Plugin 'bling/vim-airline'
-Plugin 'jmcantrell/vim-virtualenv'
-Plugin 'mileszs/ack.vim'
-Plugin 'isRuslan/vim-es6'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'Glench/Vim-Jinja2-Syntax'
-Plugin 'digitaltoad/vim-pug'
-Plugin 'mattn/emmet-vim'
-Plugin 'Chiel92/vim-autoformat'
-
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-scripts/taglist.vim'
+Plug 'plasticboy/vim-markdown'
+Plug 'kien/ctrlp.vim'
+Plug 'groenewege/vim-less'
+Plug 'othree/html5.vim'
+Plug 'hdima/python-syntax'
+Plug 'sigilioso/vim-distinguished'
+Plug 'bling/vim-airline'
+Plug 'jmcantrell/vim-virtualenv'
+Plug 'mileszs/ack.vim'
+Plug 'isRuslan/vim-es6'
+Plug 'leafgarland/typescript-vim'
+Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'digitaltoad/vim-pug'
+Plug 'mattn/emmet-vim'
+Plug 'Chiel92/vim-autoformat'
 " requires node and running (`npm install` in bundle directory)
 " requires .tern-project file. see 'extra/config/.tern-project' example
-Plugin 'ternjs/tern_for_vim'
+Plug 'ternjs/tern_for_vim'
 " ---
-
-Plugin 'terryma/vim-multiple-cursors'
+Plug 'terryma/vim-multiple-cursors'
 " Requires go up and running and GOPATH environment variable set
-Plugin 'fatih/vim-go'
+Plug 'fatih/vim-go'
 " ---
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 'zchee/deoplete-jedi'
+Plug 'davidhalter/jedi-vim'
 
-call vundle#end()
+call plug#end()
+" -------------- end plugins --------------
+
+
 filetype plugin indent on
 
 "Standard options
@@ -164,15 +170,29 @@ nnoremap <leader>b oimport ipdb;ipdb.set_trace()
 "vim-markdown
 let g:vim_markdown_folding_disabled = 1
 
-" YouCompleteMe configuration
-" see: <https://github.com/Valloric/YouCompleteMe#user-guide>
-nnoremap <leader>d :YcmCompleter GoTo<CR>
-let g:ycm_auto_trigger = 0
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_key_invoke_completion = '<C-o>'
-let g:ycm_python_binary_path = 'python3'
-"Use :YcmCompleter RestartServer [/path/to/python] to restart with other
-" python executable
+" deoplete configuration
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#disable_auto_complete = 1
+" toggle on <TAB>
+inoremap <silent><expr> <TAB>
+\ pumvisible() ? "\<C-n>" :
+\ <SID>check_back_space() ? "\<TAB>" :
+\ deoplete#mappings#manual_complete()
+function! s:check_back_space() abort "{{{
+let col = col('.') - 1
+return !col || getline('.')[col - 1]  =~ '\s'
+endfunction"}}}
+
+" jedi-vim
+let g:jedi#auto_vim_configuration = 0
+let g:jedi#goto_assignments_command = ''  " dynamically done for ft=python.
+let g:jedi#goto_definitions_command = '<Leader>d'
+let g:jedi#use_tabs_not_buffers = 0  " current default is 1.
+let g:jedi#rename_command = ''
+let g:jedi#usages_command = ''
+let g:jedi#completions_enabled = 0
+let g:jedi#smart_auto_mappings = 1
+let g:jedi#auto_close_doc = 1
 
 " Ack
 " requires ag <https://github.com/ggreer/the_silver_searcher>
