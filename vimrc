@@ -1,6 +1,3 @@
-" Vundle Configuration
-
-" Use Vundle to manage plugins
 set nocompatible
 filetype off
 
@@ -200,6 +197,9 @@ let g:jedi#auto_close_doc = 1
 " deoplete ternjs
 let g:tern#command = ["tern"]
 let g:tern#arguments = ["--persistent"]
+
+" deplete go
+let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 
 " Ack
 " requires ag <https://github.com/ggreer/the_silver_searcher>
