@@ -72,3 +72,25 @@ Install _js-beautify_ for javascript and html autoformat.
 It is configured to work with [ag](https://github.com/ggreer/the_silver_searcher).
 
     sudo apt-get install silversearcher-ag
+
+
+## go-vim
+
+Requires go up and running and GOPATH environment variable set
+
+
+## deoplete
+
+
+### js completion
+
+Requires tern installed
+
+    sudo npm install tern -g
+
+
+### go completion
+
+Requires gocode
+
+    go get -u github.com/nsf/gocode

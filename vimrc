@@ -28,9 +28,8 @@ Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'digitaltoad/vim-pug'
 Plug 'mattn/emmet-vim'
 Plug 'Chiel92/vim-autoformat'
-" requires node and running (`npm install` in bundle directory)
 " requires .tern-project file. see 'extra/config/.tern-project' example
-Plug 'ternjs/tern_for_vim'
+Plug 'ternjs/tern_for_vim', {'do': 'npm install'}
 " ---
 Plug 'terryma/vim-multiple-cursors'
 " Requires go up and running and GOPATH environment variable set
@@ -45,6 +44,8 @@ else
 endif
 Plug 'zchee/deoplete-jedi'
 Plug 'davidhalter/jedi-vim'
+Plug 'carlitux/deoplete-ternjs'
+Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 call plug#end()
 " -------------- end plugins --------------
@@ -193,6 +194,10 @@ let g:jedi#usages_command = ''
 let g:jedi#completions_enabled = 0
 let g:jedi#smart_auto_mappings = 1
 let g:jedi#auto_close_doc = 1
+
+" deoplete ternjs
+let g:tern#command = ["tern"]
+let g:tern#arguments = ["--persistent"]
 
 " Ack
 " requires ag <https://github.com/ggreer/the_silver_searcher>
