@@ -190,7 +190,8 @@ let g:jedi#documentation_command = "K"
 let g:jedi#use_tabs_not_buffers = 0  " current default is 1.
 let g:jedi#rename_command = ''
 let g:jedi#usages_command = ''
-let g:jedi#completions_enabled = 0
+let g:jedi#completions_enabled = 1 "<C-Space>
+let g:jedi#popup_on_dot = 0
 let g:jedi#smart_auto_mappings = 1
 let g:jedi#auto_close_doc = 1
 
