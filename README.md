@@ -12,7 +12,7 @@ Just my vim configuration
     sudo pip3 install neovim
 ```
 
-- Create `~/config/nvim/init.vim` file with
+- Create `~/.config/nvim/init.vim` file with
 
 ```
 set runtimepath+=~/.vim,~/.vim/after
