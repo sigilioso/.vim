@@ -34,15 +34,11 @@ Plug 'fatih/vim-go'
 " ---
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
+  Plug 'zchee/deoplete-jedi'
+  Plug 'carlitux/deoplete-ternjs'
+  Plug 'zchee/deoplete-go', { 'do': 'make'}
 endif
-Plug 'zchee/deoplete-jedi'
 Plug 'davidhalter/jedi-vim'
-Plug 'carlitux/deoplete-ternjs'
-Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 call plug#end()
 " -------------- end plugins --------------
