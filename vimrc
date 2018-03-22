@@ -65,7 +65,11 @@ set showcmd
 filetype plugin indent on
 filetype on
 filetype plugin on
-set clipboard=unnamedplus
+if has("macunix")
+    set clipboard=unnamed
+else
+    set clipboard=unnamedplus
+endif
 "Set leader to ,
 :let mapleader = ","
 " OmniComplete to F2
@@ -134,7 +138,7 @@ map <C-k> :bn<CR>
 nnoremap <leader>q :bp<CR>:bd #<CR>
 
 " Show trailing whitespaces
-hi TrailWhitespace ctermbg=17 guibg=17
+hi TrailWhitespace ctermbg=blue guibg=blue
 match TrailWhitespace /\s\+$\| \+\ze\t/
 
 " vim-ipython note:
