@@ -111,8 +111,6 @@ endif
 hi Visual term=reverse
 hi Visual guibg=blue
 hi Folded guibg=brown
-"ConqueTerm settings
-let g:ConqueTerm_CloseOnEnd = 1
 " Custom highlight for TagList
 highlight default MyTagListFileName guibg=darkblue ctermbg=darkblue
 " Undo, history and stuff
