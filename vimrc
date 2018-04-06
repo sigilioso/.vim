@@ -62,6 +62,7 @@ set hidden
 set colorcolumn=100
 set mouse=a
 set showcmd
+set backspace=indent,eol,start "Make work backspace in insert mode in macos
 filetype plugin indent on
 filetype on
 filetype plugin on
