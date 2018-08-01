@@ -34,15 +34,11 @@ Plug 'fatih/vim-go'
 " ---
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
+  Plug 'zchee/deoplete-jedi'
+  Plug 'carlitux/deoplete-ternjs'
+  Plug 'zchee/deoplete-go', { 'do': 'make'}
 endif
-Plug 'zchee/deoplete-jedi'
 Plug 'davidhalter/jedi-vim'
-Plug 'carlitux/deoplete-ternjs'
-Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 call plug#end()
 " -------------- end plugins --------------
@@ -66,10 +62,15 @@ set hidden
 set colorcolumn=100
 set mouse=a
 set showcmd
+set backspace=indent,eol,start "Make work backspace in insert mode in macos
 filetype plugin indent on
 filetype on
 filetype plugin on
-set clipboard=unnamedplus
+if has("macunix")
+    set clipboard=unnamed
+else
+    set clipboard=unnamedplus
+endif
 "Set leader to ,
 :let mapleader = ","
 " OmniComplete to F2
@@ -111,8 +112,6 @@ endif
 hi Visual term=reverse
 hi Visual guibg=blue
 hi Folded guibg=brown
-"ConqueTerm settings
-let g:ConqueTerm_CloseOnEnd = 1
 " Custom highlight for TagList
 highlight default MyTagListFileName guibg=darkblue ctermbg=darkblue
 " Undo, history and stuff
@@ -138,7 +137,7 @@ map <C-k> :bn<CR>
 nnoremap <leader>q :bp<CR>:bd #<CR>
 
 " Show trailing whitespaces
-hi TrailWhitespace ctermbg=17 guibg=17
+hi TrailWhitespace ctermbg=blue guibg=blue
 match TrailWhitespace /\s\+$\| \+\ze\t/
 
 " vim-ipython note:
