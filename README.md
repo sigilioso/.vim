@@ -17,7 +17,9 @@ Just my vim configuration
 ```
 set runtimepath+=~/.vim,~/.vim/after
 set packpath+=~/.vim
-source ~/.vim/vimrc
+if !exists('g:vscode')
+    source ~/.vim/vimrc
+endif
 ```
 
 ### Optional bashrc config
