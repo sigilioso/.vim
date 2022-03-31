@@ -44,7 +44,6 @@ if has('nvim')
   Plug 'carlitux/deoplete-ternjs'
   Plug 'zchee/deoplete-go', { 'do': 'make'}
 endif
-Plug 'davidhalter/jedi-vim'
 
 call plug#end()
 " -------------- end plugins --------------
